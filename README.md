@@ -12,7 +12,6 @@ Inside each category's directory, you'll find a folder for each payload with its
 Finally, inside the directory of the payload, you'll find the actual BadUSB payload (generally 2 versions, one for OMG and one for Flipper), optionally resources supporting it, and a `README.md` file with a detailed description of what it does and how to use it.
 
 ## Available payloads
-
-### Execution
-These payloads does some actions on the system where they are executed. Some of them are designed to speed up activities or just automate some actions.
-
+| For | Type | Category | Target | Name | PnP | Description |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![](https://img.shields.io/badge/%F0%9F%90%AC-Flipper-FF8200?style=flat-square&labelColor=FF8200) | ![](https://img.shields.io/badge/%E2%9A%92%EF%B8%8F-Benign-green?style=flat-square&labelColor=green) | ![](https://img.shields.io/badge/%F0%9F%A4%96-Execution-blue?style=flat-square&labelColor=blue) | ![](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) | [Bro, can you send me the FAP?](./execution/bro_can_you_send_me_the_fap/README.md) | 🟡 | This scripts automates FAP build for people who don't know how to do it. |
