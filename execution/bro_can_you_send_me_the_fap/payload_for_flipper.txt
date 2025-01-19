@@ -72,7 +72,7 @@ STRINGLN cd flipper_fw; \
 DELAY 200
 STRINGLN I_WANT_THIS_APP=$(grep 'appid=' applications_user/i_want_this_app/application.fam | sed -E 's/.*appid="([^"]+)".*/\1/'); \
 DELAY 200
-STRINGLN chmod +x fbt \
+STRINGLN chmod +x fbt; \
 DELAY 200
 STRINGLN ./fbt build APPSRC=$I_WANT_THIS_APP; \
 DELAY 200
@@ -82,6 +82,6 @@ STRINGLN mv $(find build -name $I_WANT_THIS_APP.fap) $HOME; \
 DELAY 200
 STRINGLN cd ..; \
 DELAY 200
-STRINGLN rm -rf flipper_fw \
+STRINGLN rm -rf flipper_fw; \
 DELAY 200
 STRINGLN find $HOME -name $I_WANT_THIS_APP.fap;
