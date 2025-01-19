@@ -1,0 +1,87 @@
+REM Title:          bro_can_you_send_me_the_fap
+REM Author:         CyberArtemio
+REM Description:    This scripts automates FAP build for people who don't know how to do it.
+REM                 Be sure to run this in a Unix-like OS. Launch the BadUSB script while having a
+REM                 terminal focused on your PC. Be sure to have 'git' installed.
+REM                 TLDR; Change line 51 and line 56
+REM Version:        v1.0
+REM Target:         Unix-like OS
+
+REM "Bro, can you send me the FAP of *app_name* in Discord DM?"
+REM ⠀⢀⠔⠊⠉⠐⠂⠠⠠⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠇⠀⢠⡤⢤⢤⣀⡀⠀⠈⠉⠐⠐⠢⠤⠄⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠣⡀⠀⠑⢧⡘⢤⢋⠵⡒⠦⡤⢄⣀⣀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠀⠉⠉⠉⠀⠉⠀⠒⠒⠄⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠈⢂⠀⠈⠳⡌⢎⠴⡉⢖⡡⢋⠴⢡⢋⡝⡱⢒⠖⡲⢒⠖⡲⢒⠖⣒⡒⣒⢒⠲⠴⠤⢤⠤⣄⡀⠀⠈⠑⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠁⡄⠀⠘⢮⡒⡙⢶⣥⣍⣎⣆⠣⡔⣡⠋⡬⣑⠩⢬⠱⢩⡘⢤⠱⢌⡊⢥⠋⡜⢢⠓⡤⢋⡝⡢⣄⠀⠈⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠢⡀⠀⠈⠫⣆⡌⡻⢾⣹⡟⣽⡭⢿⣹⡽⣻⢯⣟⢿⡻⢯⡷⣞⡾⣤⣯⣌⣱⢊⡔⠣⣌⡑⠦⡱⢄⠀⠈⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠐⢄⠀⠈⠑⠵⣢⢍⡛⠾⣽⣫⢷⣹⢧⡟⣮⢯⣽⢻⡼⣝⣳⣏⡾⣭⣛⣯⢾⣵⡰⢌⠥⢃⠭⣣⡀⠀⠡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣀⠀⠈⠙⠚⠵⠦⣩⣋⡛⡞⠻⠷⢯⠾⡭⠷⢯⣷⣾⣵⣯⣷⣞⣳⡾⣝⡷⣬⣃⠚⣄⠳⡄⠀⠰⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⣀⠀⠀⠀⠀⠀⠘⠛⠛⠻⠤⣧⣼⠧⣘⢠⣠⣄⣤⣠⣘⡄⣛⡛⠿⢧⣟⣟⢠⢛⢻⡀⠀⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⢀⣀⠀⢀⣀⢀⠀⠀⠀⠀⠀⠀⣀⠠⠄⠚⠉⠀⠀⣀⡤⢴⠒⣎⢫⠱⢌⠲⢡⠒⡴⣈⠦⢡⢋⡝⣫⢞⡵⣊⠬⣙⠳⣎⢆⢳⡀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⡔⠁⠀⠀⠀⠀⠀⠈⠉⠀⠈⠉⠁⠀⠀⣀⡠⢴⠲⣙⠢⢍⢆⡹⢠⠎⣑⢪⢡⣣⣩⣔⣢⣍⣆⡣⢔⢢⢃⢻⣦⢱⢌⠣⡜⢨⢒⢳⡀⠀⢃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⢇⠀⠈⠻⣍⠏⡕⠲⠦⢤⢤⡒⢖⠪⣍⠣⡜⢂⠳⣠⢋⣆⣮⣴⡷⣞⠿⣏⣿⣹⣳⣽⡶⠿⣚⢛⠻⠷⡾⢯⡽⣋⢌⣳⠼⢧⡊⠖⣳⡀⠀⠑⠠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠑⢀⠀⠀⠙⠮⣱⡉⢖⢢⡉⣬⡵⣤⣷⣼⣳⢷⡻⣟⡽⣣⢿⡼⣫⣟⣽⢶⣛⡩⠴⠦⠓⠒⠛⠚⠓⠚⣥⢷⣌⡾⢡⡙⢼⣡⢋⠴⡙⡲⣄⠀⠈⢢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠉⠢⠄⠀⠀⠙⠺⠴⣘⣢⠙⣛⠺⠶⢯⠷⠿⠵⠿⡭⣷⡻⠯⠛⠉⠁⠀⠀⢀⣀⣀⡤⠀⠀⣠⢞⡍⡞⢬⡶⢷⡘⢼⢂⢎⡒⠥⣑⢪⠳⡀⠀⠑⡀⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠉⠀⠤⣀⠀⠀⠉⠙⠒⠛⠮⠦⠷⠼⠓⠛⠉⠁⠀⢀⡠⠄⠐⠊⠉⠀⠀⠜⠀⢀⣔⠳⠌⡴⣩⠏⢦⢹⡜⢢⡉⢦⡘⣑⠢⠥⡩⠽⡄⠀⢱⠀⠀⠀⠀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠐⠂⠠⠠⠀⣀⣀⣀⣀⠠⠤⠀⠒⠉⠀⠀⠀⠀⠀⠀⠀⡈⠀⢀⡞⣌⡷⢩⢴⢣⡙⣂⠻⡘⢤⠓⢢⠜⣄⢫⣔⠡⣃⢷⠀⠀⠉⠂⢤⡀⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⡼⢱⢸⢇⠣⣾⡥⠶⠓⣯⠵⠚⠋⠉⠉⠀⠀⠀⠀⠀⠀⠉⠑⠢⣀⠀⠈⠠⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⢰⣯⠖⡻⢌⢣⣿⡠⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⢷⡀⠀⠱⡀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠘⠁⠀⣼⣟⡠⡵⢮⣖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⡄⠀⢰⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠐⠈⠀⢠⣶⢷⡶⠑⡈⠁⠀⠀⣀⡠⠤⠐⠒⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣸⠀⠀⡇
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠌⠀⠀⡠⠒⢹⢯⠏⠀⣜⡠⠔⠊⣉⡠⠤⠔⠒⠂⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⠃⠀⣰⠁
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⡎⠀⠀⠘⠃⠠⢪⡣⠔⠂⠉⠀⢀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠋⠀⠠⠁⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠠⠤⠐⠒⠒⣈⣹⠽⠙⢣⣠⣤⣀⡂⠀⠁⢧⠐⠒⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢔⡎⠀⢀⠔⠁⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠉⠀⠀⣀⠤⠐⠊⠉⢀⢴⠒⠉⢼⠀⠀⠀⠈⠉⠀⠊⠓⠤⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⡚⣌⠒⡇⠀⢰⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠒⠉⠀⠀⠀⢠⠊⠁⡄⡆⠀⠈⢣⡄⠒⢠⣤⣤⣤⣤⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡔⡎⠓⣴⠑⢢⡍⣷⠀⠀⡄⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠐⠉⠀⠀⠉⠘⣠⠆⠈⠀⡠⠋⠂⠂⠉⠀⠀⠀⠀⠀⠉⠑⠒⠛⠽⣭⣳⣽⣇⠀⠀⢀⠀⠀⠀⠀⠀⣀⠴⣪⣅⡓⢬⢑⢢⡑⠎⡴⣘⡄⠀⠱⡀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⣷⣾⡄⠀⠐⠀⠀⣾⡆⠀⠀⢀⣴⡶⠿⠿⠷⣶⣄⠀⠀⠀⠀⠀⢸⣿⢿⣆⠀⠸⡀⠀⣀⠔⠋⠀⠀⠀⠀⠉⠒⠭⡆⡜⡱⡐⠦⡹⡄⠀⠐⢄⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⣿⡟⢿⣆⠀⠀⠀⣿⡇⠀⢰⣿⠋⠀⠀⠀⠀⠈⢻⣧⠀⠀⠀⠀⠸⡻⢿⡿⠀⠀⢣⠞⠁⠀⡀⠀⠁⠁⠀⠢⠀⠀⠈⠳⢕⠬⣑⡑⣚⢆⠀⠀⠂
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⣿⡇⠈⢻⣦⠀⠀⣿⡇⠀⣿⡇⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠑⢄⡀⠀⠀⡸⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠑⠄⠀⠀⠙⢴⡘⠤⣫⠃⠀⡀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⣿⡇⠀⠀⠹⣷⡀⣿⡇⠀⢿⣧⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⢀⡀⠀⠈⠉⠉⠀⢀⠌⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠄⠀⠈⠳⡣⠋⠀⡠⠁
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⣿⡇⠀⠀⠀⠙⣷⣿⡇⠀⠈⢿⣦⣀⠀⠀⢀⣠⡿⠃⠀⢠⠒⠉⠀⠈⠐⠐⠀⠒⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⡄⠀⠀⢠⠔⠁⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀⠀⠛⠃⠀⢸⢄⠀⠈⠛⠃⠀⠀⠀⠉⠛⠛⠛⠛⠋⠀⠀⠠⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀
+REM ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠠⠤⠤⠔⠉⠈⠒⠤⠤⠤⠄⠁⠑⠢⠤⠀⠤⠤⠄⠒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+REM Pick the firmware that you are currently using:
+REM - for Official use: https://github.com/flipperdevices/flipperzero-firmware.git
+REM - for Unleashed use: https://github.com/DarkFlippers/unleashed-firmware.git
+REM - for Momentum use: https://github.com/Next-Flip/Momentum-Firmware.git
+REM - for RogueMaster use: https://github.com/RogueMaster/flipperzero-firmware-wPlugins.git
+REM CHANGE THIS:
+STRINGLN FLIPPER_FW_REPO=<add here the link to the Github repo of Flipper firmware>
+
+DELAY 500
+
+REM CHANGE THIS:
+STRINGLN FLIPPER_APP_REPO=<add here the link to the Github repo of the app>
+
+DELAY 500
+
+REM The following commands sequence clone the firmware and the app locally into /tmp folder.
+REM Once they have been succesfully cloned, the toolchain is installed and then
+REM the app is built using 'fbt' command. The built FAP is then launched/installed on your
+REM Flipper so BE SURE THAT qFlipper IS NOT RUNNING. Finally the FAP is copied into
+REM your home directory and all the files added into /tmp are removed.
+STRINGLN cd /tmp; \
+DELAY 200
+STRINGLN git clone $FLIPPER_FW_REPO flipper_fw; \
+DELAY 200
+STRINGLN git clone $FLIPPER_APP_REPO flipper_fw/applications_user/i_want_this_app; \
+DELAY 200
+STRINGLN cd flipper_fw; \
+DELAY 200
+STRINGLN I_WANT_THIS_APP=$(grep 'appid=' applications_user/i_want_this_app/application.fam | sed -E 's/.*appid="([^"]+)".*/\1/'); \
+DELAY 200
+STRINGLN chmod +x fbt \
+DELAY 200
+STRINGLN ./fbt build APPSRC=$I_WANT_THIS_APP; \
+DELAY 200
+STRINGLN ./fbt launch APPSRC=$I_WANT_THIS_APP; \
+DELAY 200
+STRINGLN mv $(find build -name $I_WANT_THIS_APP.fap) $HOME; \
+DELAY 200
+STRINGLN cd ..; \
+DELAY 200
+STRINGLN rm -rf flipper_fw \
+DELAY 200
+STRINGLN find $HOME -name $I_WANT_THIS_APP.fap;
