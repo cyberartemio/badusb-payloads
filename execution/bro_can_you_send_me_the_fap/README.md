@@ -2,15 +2,15 @@
     <h1>🤓 Bro, can you send me the FAP? 🤓</h1>
     <table>
         <tr align="center">
-            <td>Category</td>
-            <td>Type</td>
-            <td>For</td>
-            <td>Target</td>
+            <td><b>Category</b></td>
+            <td><b>Type</b></td>
+            <td><b>For</b></td>
+            <td><b>Target</b></td>
         </tr>
         <tr align="center">
-            <td><img src="https://img.shields.io/badge/%F0%9F%A4%96-Execution-blue?style=for-the-badge&labelColor=blue" alt="" /></td>
-            <td><img src="https://img.shields.io/badge/%E2%9A%92%EF%B8%8F-Benign-009432?style=for-the-badge&labelColor=009432" alt="" /></td>
-            <td><img src="https://img.shields.io/badge/%F0%9F%90%AC-Flipper-FF8200?style=for-the-badge&labelColor=FF8200" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/-%F0%9F%A4%96%20Execution-blue?style=for-the-badge&labelColor=blue" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/-%E2%9A%92%EF%B8%8F%20Benign-009432?style=for-the-badge&labelColor=009432" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/-%F0%9F%90%AC%20Flipper-FF8200?style=for-the-badge&labelColor=FF8200" alt="" /></td>
             <td><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="" /></td>
         </tr>
     </table>
