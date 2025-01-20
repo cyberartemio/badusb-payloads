@@ -8,10 +8,10 @@
             <td>Target</td>
         </tr>
         <tr align="center">
-            <td><img src="https://img.shields.io/badge/%F0%9F%A4%96-Execution-blue?style=flat-square&labelColor=blue" alt="" /></td>
-            <td><img src="https://img.shields.io/badge/%E2%9A%92%EF%B8%8F-Benign-green?style=flat-square&labelColor=green" alt="" /></td>
-            <td><img src="https://img.shields.io/badge/%F0%9F%90%AC-Flipper-FF8200?style=flat-square&labelColor=FF8200" alt="" /></td>
-            <td><img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/%F0%9F%A4%96-Execution-blue?style=for-the-badge&labelColor=blue" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/%E2%9A%92%EF%B8%8F-Benign-009432?style=for-the-badge&labelColor=009432" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/%F0%9F%90%AC-Flipper-FF8200?style=for-the-badge&labelColor=FF8200" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="" /></td>
         </tr>
     </table>
 </div>
