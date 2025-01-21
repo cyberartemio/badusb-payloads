@@ -2,7 +2,7 @@
     <h1>😈 BadUSB Payloads 😈</h1>
     <div>
         <a href="https://discord.gg/5vrJbbW3ve"><img src="https://img.shields.io/badge/Discord%20server-7289da?style=for-the-badge&logo=discord&logoColor=white" alt="discord-badge" /></a>
-        <img src="https://img.shields.io/badge/-1%20Payloads-A3CB38?style=for-the-badge" alt="payloads-count" />
+        <img src="https://img.shields.io/badge/-2%20Payloads-A3CB38?style=for-the-badge" alt="payloads-count" />
         <img src="https://img.shields.io/github/stars/cyberartemio/badusb-payloads?style=for-the-badge" alt="repo-stars" />
         <img src="https://img.shields.io/github/license/cyberartemio/badusb-payloads?style=for-the-badge" alt="repo-license" />
     </div>
@@ -27,8 +27,9 @@ By using or cloning this repository, you acknowledge and agree to the following:
 
 ## 🚀 Available payloads
 | **Category** | **Target** | **Type** | **Name** | **For** |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | --- | :---: |
 | ![](https://img.shields.io/badge/-%F0%9F%A4%96%20Execution-blue?style=for-the-badge&labelColor=blue) | ![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) | ![](https://img.shields.io/badge/-%E2%9A%92%EF%B8%8F%20Benign-009432?style=for-the-badge&labelColor=009432) | [Bro, can you send me the FAP?](./execution/bro_can_you_send_me_the_fap/README.md) | ![](https://img.shields.io/badge/-%F0%9F%90%AC%20Flipper-FF8200?style=for-the-badge&labelColor=FF8200) |
+| ![](https://img.shields.io/badge/-%F0%9F%92%B0%20Exfiltration-purple?style=for-the-badge) | ![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white) | ![](https://img.shields.io/badge/-%E2%9A%92%EF%B8%8F%20Malicious-EA2027?style=for-the-badge) | [Skibidi Clipboard](./exfiltration/skibidi_clipboard/README.md) | ![](https://img.shields.io/badge/-%F0%9F%98%88%20OMG-black?style=for-the-badge) |
 
 ## ❤️ Contribution
 
