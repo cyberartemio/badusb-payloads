@@ -8,7 +8,7 @@
             <td><b>Target</b></td>
         </tr>
         <tr align="center">
-            <td><img src="https://img.shields.io/badge/-%F0%9F%92%B0%20Exfiltration-purple?style=for-the-badge" alt="" /></td>
+            <td><img src="https://img.shields.io/badge/-%F0%9F%94%8E%20Recon-darkcyan?style=for-the-badge" alt="" /></td>
             <td><img src="https://img.shields.io/badge/-%E2%9A%94%EF%B8%8F%20Malicious-EA2027?style=for-the-badge" alt="" /></td>
             <td><img src="https://img.shields.io/badge/-%F0%9F%98%88%20OMG-black?style=for-the-badge" alt="" /></td>
             <td><img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white" alt="" /></td>
@@ -83,7 +83,7 @@ This payload exfiltrates a lot of information about the target where it has been
    - For **Dropbox**:
      - Register a new OAuth application
      - Register a development token for your app
-2. Download the payload locally on your pc from [here](https://raw.githubusercontent.com/cyberartemio/badusb-payloads/refs/heads/main/exfiltration/macdoxx/payload_for_omg.txt)
+2. Download the payload locally on your pc from [here](https://raw.githubusercontent.com/cyberartemio/badusb-payloads/refs/heads/main/recon/macdoxx/payload_for_omg.txt)
 3. Copy `macdoxx.sh` script on your HTTP server
 4. On line 14, replace `<...>` with the URL of `macdoxx.sh` script hosted on your server
 6. On line 15, replace `<...>` with the exfiltration method. Use:

